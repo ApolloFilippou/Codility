@@ -1,0 +1,14 @@
+def solution(S, P, Q):
+    res = []
+    for p, q in zip(P, Q):
+        sub = S[p:q+1]
+        if 'A' in sub:
+            nuc = 1
+        elif 'C' in sub:
+            nuc = 2
+        elif 'G' in sub:
+            nuc = 3
+        else:
+            nuc = 4
+        res.append(nuc)
+    return res
