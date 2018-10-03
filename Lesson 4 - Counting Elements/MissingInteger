@@ -1,0 +1,9 @@
+def solution(A):
+    A = [x for x in set(A) if x>0]
+    if len(A)==0:
+        return 1
+    A.sort()
+    for i in range(len(A)):
+        if i+1!=A[i]:
+            return i+1
+    return i+2
