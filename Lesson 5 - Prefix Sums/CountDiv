@@ -1,0 +1,7 @@
+import math
+
+def solution(A, B, K):
+    first = math.ceil(A/K)*K
+    last = math.floor(B/K)*K
+    res = int((last-first)/K+1)
+    return res
