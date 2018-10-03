@@ -1,0 +1,11 @@
+def solution(A):
+    idx = 0
+    avg = 10**5
+    for i in range(len(A)-1):
+        if avg > (A[i]+A[i+1])/2:
+            avg = (A[i]+A[i+1])/2
+            idx = i
+        if i < len(A)-2 and avg > (A[i]+A[i+1]+A[i+2])/3:
+            avg = (A[i]+A[i+1]+A[i+2])/3
+            idx = i
+    return idx
