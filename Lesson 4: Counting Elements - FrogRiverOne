@@ -1,0 +1,10 @@
+def solution(X, A):
+    path = [-1]*X
+    tot = (X+1)*X/2
+    for i in range(len(A)):
+        if path[A[i]-1] == -1:
+            path[A[i]-1] = i
+            tot -= A[i]
+            if tot==0:
+                return i
+    return -1
