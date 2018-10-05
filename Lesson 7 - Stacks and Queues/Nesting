@@ -1,0 +1,12 @@
+def solution(S):
+    stack = []
+    for c in S:
+        if c=='(':
+            stack.append(c)
+        elif c==')' and len(stack)!=0:
+            stack.pop()
+        else:
+            return 0
+    if len(stack)!=0:
+        return 0
+    return 1
