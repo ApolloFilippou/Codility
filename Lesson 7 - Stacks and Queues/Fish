@@ -1,1 +1,15 @@
-
+def solution(A, B):
+    stack = []
+    eaten = 0
+    for i in range(len(A)):
+        if B[i]==1:
+            stack.append(A[i])
+        else:
+            while len(stack)!=0:
+                if A[i]>stack[-1]:
+                    stack.pop()
+                    eaten += 1
+                else:
+                    eaten += 1
+                    break
+    return len(A)-eaten
