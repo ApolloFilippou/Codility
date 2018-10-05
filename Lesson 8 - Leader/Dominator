@@ -1,0 +1,10 @@
+def solution(A):
+    n = len(A)
+    if n==0:
+        return -1
+    B = sorted(A)
+    leader = B[n//2]
+    count = B.count(leader)
+    if count>n/2:
+        return A.index(leader)
+    return -1
