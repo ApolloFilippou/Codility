@@ -1,0 +1,7 @@
+def solution(A):
+    max_sum = -10E10
+    max_slice = -10E10
+    for a in A:
+        max_sum = max(a, max_sum+a)
+        max_slice = max(max_slice, max_sum)
+    return max_slice
