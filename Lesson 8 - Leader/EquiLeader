@@ -1,0 +1,13 @@
+def solution(A):
+    n = len(A)
+    B = sorted(A)
+    leader = B[n//2]
+    total = B.count(leader)
+    equis = 0
+    count = 0
+    for i in range(n):
+        if A[i]==leader:
+            count += 1
+        if count>(i+1)/2 and total-count>(n-i-1)/2:
+            equis += 1
+    return equis
