@@ -1,0 +1,8 @@
+def solution(N):
+    factors = []
+    for i in range(1, int(N**(1/2))+1):
+        if N%i==0:
+            factors.append(i)
+            factors.append(N//i)
+    factors.sort()
+    return 2*(factors[len(factors)//2-1]+factors[len(factors)//2])
